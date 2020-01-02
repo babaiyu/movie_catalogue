@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_movie_detail.*
 
 class MovieDetail : AppCompatActivity(), View.OnClickListener {
     companion object {
-        const val EXTRA_MOVIE = "extra_movie"
+        const val EXTRA_MOVIE = "extra_movie" // Initialize intent data name
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,7 @@ class MovieDetail : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_movie_detail)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val movie = intent.getParcelableExtra(EXTRA_MOVIE) as Movie
+        val movie = intent.getParcelableExtra(EXTRA_MOVIE) as Movie // Get selected movie with Intent getParcelableExtra
         title = movie.title
         movie_title.text = movie.title
         movie_release.text = movie.release

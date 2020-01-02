@@ -11,10 +11,10 @@ androidExtensions {
 android {
     signingConfigs {
         debug {
-            storeFile file('/Users/sai03/personal/android_kotlin/MovieCatalogue/app/debug.keystore')
+            storeFile file('debug.keystore')
         }
         signing_config {
-            storeFile file('/Users/sai03/personal/android_kotlin/MovieCatalogue/app/my-keystore')
+            storeFile file('my-keystore')
             storePassword '1q2w3e4r5t'
             keyAlias = 'my-keystore'
             keyPassword '1q2w3e4r5t'

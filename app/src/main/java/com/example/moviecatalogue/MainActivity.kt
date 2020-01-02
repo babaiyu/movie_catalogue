@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ListView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var adapter: MovieAdapter
+    private lateinit var adapter: MovieAdapter // Generate Movie Adapter
     private lateinit var dataTitle: Array<String>
     private lateinit var dataRelease: Array<String>
     private lateinit var dataDescription: Array<String>
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dataCaster: Array<String>
     private lateinit var dataDirector: Array<String>
     private lateinit var dataPhoto: TypedArray
-    private var movies = arrayListOf<Movie>()
+    private var movies = arrayListOf<Movie>() // Get movies data with Parcelable Movie
     private var titleBar: String = "Movie Catalogue"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,14 +27,15 @@ class MainActivity : AppCompatActivity() {
 
         title = titleBar
 
-        val listView: ListView = findViewById(R.id.lv_list)
+        // Connecting Adapter with ListView
         adapter = MovieAdapter(this)
-        listView.adapter = adapter
+        lv_list.adapter = adapter
 
-        prepare()
-        addItem()
+        prepare() // Prepare data Movies from Array Strings
+        addItem() // Show data Movies to MainActivity
 
-        listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, index, _ ->
+        // Navigating to Detail Movie with Intent putExtra where is the movie selected
+        lv_list.onItemClickListener = AdapterView.OnItemClickListener { _, _, index, _ ->
             val moveMovie = Movie(
                 movies[index].title,
                 movies[index].release,
