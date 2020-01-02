@@ -7,4 +7,5 @@
     <color name="customBlue">#18A4E0</color>
     <color name="customWhite">#FAF8F0</color>
     <color name="customGray">#D3DDE6</color>
+    <color name="customBlack">#222222</color>
 </resources>

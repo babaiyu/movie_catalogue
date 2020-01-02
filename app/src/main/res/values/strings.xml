@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">MovieCatalogue</string>
     <string name="image_poster_movie">Image Poster Movie</string>
+    <string name="release_date">Release Date</string>
+    <string name="overview">Overview</string>
+    <string name="caster">Caster</string>
+    <string name="director">Director</string>
+    <string name="like_this_movie">Like this Movie</string>
 
     <string-array name="title">
         <item>A Star is Born</item>
