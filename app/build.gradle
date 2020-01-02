@@ -5,6 +5,17 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+        }
+        signing_config {
+            storeFile file('my-keystore')
+            storePassword '1q2w3e4r5t'
+            keyAlias = 'my-keystore'
+            keyPassword '1q2w3e4r5t'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
